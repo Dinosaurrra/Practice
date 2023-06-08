@@ -1,24 +1,17 @@
 ﻿#include <iostream>
 using namespace std;
 
-int fibonacci(int n)
+int fibonachi(int n)
 {
 	if (n <= 1)
 		return n;
-	int prev = 0;
-	int curr = 1;
-	for (int i = 2; i <= n; i++)
-	{
-		int temp = curr;
-		curr = prev + curr;
-		prev = temp;
-	} return curr;
+	return fibonachi(n - 1) + fibonachi(n - 2);
 }
 
 int main()
 {
 	int n;
 	cin >> n;
-	cout << fibonacci(n) << endl;
+	cout << fibonachi(n) << endl;
 	return 0;
 }
