@@ -1,17 +1,16 @@
-﻿#include <iostream>
+﻿#include<iostream>
+#include<cmath>
 using namespace std;
 
-int fibonachi(int n)
-{
-	if (n <= 1)
-		return n;
-	return fibonachi(n - 1) + fibonachi(n - 2);
+int fib(int n) {
+	double phi = (1 + sqrt(5)) / 2;
+	return round(pow(phi, n) / sqrt(5));
 }
 
 int main()
 {
 	int n;
 	cin >> n;
-	cout << fibonachi(n) << endl;
+	cout << fib(n) << std::endl;
 	return 0;
 }
